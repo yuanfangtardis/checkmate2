@@ -138,6 +138,7 @@ libanalyses_la_SOURCES += include/analyses/ATLAS_8TeV/atlas_higg_2013_03.h src/a
 libanalyses_la_SOURCES += include/analyses/ATLAS_13TeV/atlas_1911_12606.h src/analyses/ATLAS_13TeV/atlas_1911_12606.cc
 libanalyses_la_SOURCES += include/analyses/ATLAS_13TeV/atlas_1807_07447.h src/analyses/ATLAS_13TeV/atlas_1807_07447.cc
 libanalyses_la_SOURCES += include/analyses/ATLAS_14TeV_HighLumi/atlas_phys_2014_007.h src/analyses/ATLAS_14TeV_HighLumi/atlas_phys_2014_007.cc
+libanalyses_la_SOURCES += include/analyses/CMS_13TeV/cms1703_01651.h src/analyses/CMS_13TeV/cms1703_01651.cc
 #@@extraanalysis@@
 
 libanalyses_la_LDFLAGS = -avoid-version -shared
