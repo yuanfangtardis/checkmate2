@@ -3,6 +3,14 @@ CheckMATE - Changelog
 Ver 2.0.26
 ---------
         
+2021-11-18   Di Zhang <dz481655@gmail.com>
+        
+    ~ added atlas_2106_01676
+    ~ In /home/zd/Programs/checkmate/checkmate2/tools/analysis/Makefile.am, we changed the line 139 from "libanalyses_la_LIBADD =  -L@ROOTLIBDIR@ @ROOTGLIBS@ @ROOTLIBS@ -L@DELPHESLIBDIR@ @DELPHESLIBS@" to "libanalyses_la_LIBADD =  -L@ROOTLIBDIR@ @ROOTGLIBS@ @ROOTLIBS@ -L@DELPHESLIBDIR@ @DELPHESLIBS@ -lm -L/usr/local/lib -lRestFrames" 
+    
+Ver 2.0.26
+---------
+        
 2018-04-16   Krzysztof Rolbiecki <krolb@fuw.edu.pl>
         
     ~ fixed center-of-mass energy setting and unifying lepton isolation
