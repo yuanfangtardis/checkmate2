@@ -162,8 +162,8 @@ CTAGS = ctags
 CSCOPE = cscope
 DIST_SUBDIRS = $(SUBDIRS)
 am__DIST_COMMON = $(srcdir)/Makefile.in AUTHORS COPYING ChangeLog \
-	INSTALL NEWS README compile config.guess config.sub install-sh \
-	ltmain.sh missing
+	INSTALL NEWS README compile config.guess config.sub depcomp \
+	install-sh ltmain.sh missing
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 distdir = $(PACKAGE)-$(VERSION)
 top_distdir = $(distdir)
@@ -234,7 +234,7 @@ DEPDIR = .deps
 DLLTOOL = false
 DSYMUTIL = 
 DUMPBIN = 
-DYLD_LIBRARY_PATH = /home/zd/Programs/checkmate/RestFrames/lib:/home/zd/Programs/root/lib:/home/zd/Programs/root/lib
+DYLD_LIBRARY_PATH = /home/zd/Programs/checkmate/RestFrames/lib:/home/zd/Programs/root/lib:/home/zd/Programs/root/lib:/home/zd/Programs/root/lib
 ECHO_C = 
 ECHO_N = -n
 ECHO_T = 
@@ -254,10 +254,10 @@ INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 LD = /usr/bin/ld -m elf_x86_64
 LDFLAGS = 
-LD_LIBRARY_PATH = /home/zd/Programs/checkmate/RestFrames/lib:/home/zd/Programs/root/lib:/home/zd/Programs/checkmate/MG5_aMC_v2_6_6/HEPTools/lhapdf6/lib:/home/zd/Programs/checkmate/MG5_aMC_v2_6_6/HEPTools/lhapdf6/lib:/home/zd/Programs/root/lib
+LD_LIBRARY_PATH = /home/zd/Programs/checkmate/RestFrames/lib:/home/zd/Programs/root/lib:/home/zd/Programs/checkmate/MG5_aMC_v2_6_6/HEPTools/lhapdf6/lib:/home/zd/Programs/checkmate/MG5_aMC_v2_6_6/HEPTools/lhapdf6/lib:/home/zd/Programs/root/lib:/home/zd/Programs/root/lib
 # TODO: Check if these are still needed, they were originally introduced
 #       to easily compile Delphes
-LD_RUN_PATH = :/home/zd/Programs/root/lib
+LD_RUN_PATH = :/home/zd/Programs/root/lib:/home/zd/Programs/root/lib
 LIBOBJS = 
 LIBS =  -L/home/zd/Programs/checkmate/hepmc2.06.09/lib -lHepMCfio -lHepMC -L/home/zd/Programs/checkmate/pythia8244/lib -lpythia8 -ldl -lm -lz -L/home/zd/Programs/checkmate/delphes -L/home/zd/Programs/root/lib -lGui -lCore -lCint -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lTree -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lCore -lCint -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lTree -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lEG -lDelphes
 LIBTOOL = $(SHELL) $(top_builddir)/libtool

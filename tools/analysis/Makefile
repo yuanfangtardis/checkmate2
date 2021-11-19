@@ -238,7 +238,8 @@ am_libanalyses_la_OBJECTS = src/global/Global.lo \
 	src/analyses/ATLAS_13TeV/atlas_1706_03731.lo \
 	src/analyses/ATLAS_13TeV/atlas_1908_08215.lo \
 	src/analyses/ATLAS_13TeV/atlas_1909_08457.lo \
-	src/analyses/ATLAS_13TeV/atlas_conf_2019_040.lo
+	src/analyses/ATLAS_13TeV/atlas_conf_2019_040.lo \
+	src/analyses/ATLAS_13TeV/atlas_2106_01676.lo
 libanalyses_la_OBJECTS = $(am_libanalyses_la_OBJECTS)
 AM_V_lt = $(am__v_lt_$(V))
 am__v_lt_ = $(am__v_lt_$(AM_DEFAULT_VERBOSITY))
@@ -356,7 +357,7 @@ DEPDIR = .deps
 DLLTOOL = false
 DSYMUTIL = 
 DUMPBIN = 
-DYLD_LIBRARY_PATH = /home/zd/Programs/checkmate/RestFrames/lib:/home/zd/Programs/root/lib
+DYLD_LIBRARY_PATH = /home/zd/Programs/checkmate/RestFrames/lib:/home/zd/Programs/root/lib:/home/zd/Programs/root/lib
 ECHO_C = 
 ECHO_N = -n
 ECHO_T = 
@@ -376,7 +377,7 @@ INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 LD = /usr/bin/ld -m elf_x86_64
 LDFLAGS = 
-LD_LIBRARY_PATH = /home/zd/Programs/checkmate/RestFrames/lib:/home/zd/Programs/root/lib:/home/zd/Programs/checkmate/MG5_aMC_v2_6_6/HEPTools/lhapdf6/lib:/home/zd/Programs/checkmate/MG5_aMC_v2_6_6/HEPTools/lhapdf6/lib
+LD_LIBRARY_PATH = /home/zd/Programs/checkmate/RestFrames/lib:/home/zd/Programs/root/lib:/home/zd/Programs/checkmate/MG5_aMC_v2_6_6/HEPTools/lhapdf6/lib:/home/zd/Programs/checkmate/MG5_aMC_v2_6_6/HEPTools/lhapdf6/lib:/home/zd/Programs/root/lib
 LD_RUN_PATH = /home/zd/Programs/root/lib:/home/zd/Programs/checkmate/delphes
 LIBOBJS = 
 LIBS =  -L/home/zd/Programs/checkmate/hepmc2.06.09/lib -lHepMCfio -lHepMC -L/home/zd/Programs/checkmate/pythia8244/lib -lpythia8 -ldl -lm -lz -L/home/zd/Programs/checkmate/delphes -L/home/zd/Programs/root/lib -lGui -lCore -lCint -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lTree -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lCore -lCint -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lTree -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lEG -lDelphes
@@ -707,11 +708,14 @@ libanalyses_la_SOURCES = src/global/Global.cc src/include/Global.h \
 	include/analyses/ATLAS_13TeV/atlas_1909_08457.h \
 	src/analyses/ATLAS_13TeV/atlas_1909_08457.cc \
 	include/analyses/ATLAS_13TeV/atlas_conf_2019_040.h \
-	src/analyses/ATLAS_13TeV/atlas_conf_2019_040.cc
+	src/analyses/ATLAS_13TeV/atlas_conf_2019_040.cc \
+	include/analyses/ATLAS_13TeV/atlas_2106_01676.h \
+	src/analyses/ATLAS_13TeV/atlas_2106_01676.cc
 #@@extraanalysis@@
 libanalyses_la_LDFLAGS = -avoid-version -shared
 #-module 
-libanalyses_la_LIBADD = -L/home/zd/Programs/root/lib -lGui -lCore -lCint -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lTree -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lCore -lCint -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lTree -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -L/home/zd/Programs/checkmate/delphes -lEG -lDelphes
+#libanalyses_la_LIBADD =  -L/home/zd/Programs/root/lib -lGui -lCore -lCint -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lTree -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lCore -lCint -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lTree -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -L/home/zd/Programs/checkmate/delphes -lEG -lDelphes
+libanalyses_la_LIBADD = -L/home/zd/Programs/root/lib -lGui -lCore -lCint -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lTree -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -lCore -lCint -lRIO -lNet -lHist -lGraf -lGraf3d -lGpad -lTree -lRint -lPostscript -lMatrix -lPhysics -lMathCore -lThread -L/home/zd/Programs/checkmate/delphes -lEG -lDelphes -lm -L/usr/local/lib -lRestFrames
 all: all-am
 
 .SUFFIXES:
@@ -1168,6 +1172,9 @@ src/analyses/ATLAS_13TeV/atlas_1909_08457.lo:  \
 src/analyses/ATLAS_13TeV/atlas_conf_2019_040.lo:  \
 	src/analyses/ATLAS_13TeV/$(am__dirstamp) \
 	src/analyses/ATLAS_13TeV/$(DEPDIR)/$(am__dirstamp)
+src/analyses/ATLAS_13TeV/atlas_2106_01676.lo:  \
+	src/analyses/ATLAS_13TeV/$(am__dirstamp) \
+	src/analyses/ATLAS_13TeV/$(DEPDIR)/$(am__dirstamp)
 
 libanalyses.la: $(libanalyses_la_OBJECTS) $(libanalyses_la_DEPENDENCIES) $(EXTRA_libanalyses_la_DEPENDENCIES) 
 	$(AM_V_CXXLD)$(libanalyses_la_LINK) -rpath $(mylibdir) $(libanalyses_la_OBJECTS) $(libanalyses_la_LIBADD) $(LIBS)
@@ -1219,6 +1226,7 @@ include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1712_08119.Plo
 include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1802_03158.Plo
 include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1908_08215.Plo
 include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_1909_08457.Plo
+include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_2106_01676.Plo
 include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_conf_2015_082.Plo
 include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_conf_2016_013.Plo
 include src/analyses/ATLAS_13TeV/$(DEPDIR)/atlas_conf_2016_050.Plo
